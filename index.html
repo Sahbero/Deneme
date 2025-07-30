@@ -1,101 +1,100 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yaratıcı dijital profesyonel portfolyosu.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Berhan Savaş | Dijital Portfolyo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #1de9b6, #1dc4e9);
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
-      padding: 20px;
+      line-height: 1.6;
     }
 
     header {
+      padding: 60px 20px;
       text-align: center;
-      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
       font-size: 48px;
-      font-weight: 700;
-      animation: fadeInDown 1s ease-in-out;
+      font-weight: 600;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     header p {
-      font-size: 18px;
+      font-size: 20px;
       margin-top: 10px;
-      opacity: 0.85;
+      animation: fadeIn 2s ease-in-out;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+      margin: 30px 0;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: 600;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom 0.3s;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      border-bottom: 2px solid #fff;
+      color: #00E5FF;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background-color: rgba(255, 255, 255, 0.1);
+      max-width: 960px;
+      margin: auto;
       padding: 20px;
-      border-radius: 16px;
-      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    section {
+      margin: 60px 0;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s forwards;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
+    section:nth-child(1) { animation-delay: 0.3s; }
+    section:nth-child(2) { animation-delay: 0.6s; }
+    section:nth-child(3) { animation-delay: 0.9s; }
 
-    .card p {
-      font-size: 16px;
-      line-height: 1.6;
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00E5FF;
     }
 
     footer {
       text-align: center;
-      margin-top: 60px;
+      padding: 30px;
       font-size: 14px;
-      opacity: 0.7;
+      background: rgba(0, 0, 0, 0.2);
     }
 
-    @keyframes fadeInDown {
+    @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 36px; }
+      nav a { margin: 0 10px; font-size: 14px; }
     }
   </style>
 </head>
@@ -103,38 +102,34 @@
 
   <header>
     <h1>Berhan Savaş</h1>
-    <p>Yaratıcı Profesyonel · Tasarımcı · Stratejist</p>
-    <nav>
-      <a href="#hakkimda">Hakkımda</a>
-      <a href="#projeler">Projeler</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
+    <p>Yaratıcı İçerikler | İç Mimari Çözümler | Dijital Sanat</p>
   </header>
 
-  <main class="container">
-    <section class="card" id="hakkimda">
-      <h3>Hakkımda</h3>
-      <p>Merhaba, ben Berhan. Görsel estetik ve işlevselliği birleştiren özgün dijital projeler üretiyorum. Teknoloji, iç mimarlık ve yaratıcı içerik üretimi alanında sınırları zorlamayı severim.</p>
+  <nav>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
+  <div class="container">
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <p>Merhaba! Ben Berhan. İç mimarlık, dijital tasarım ve yapay zekâ destekli çözümler üzerine çalışan bir tasarımcıyım. Yeni teknolojileri kullanarak yaşayan mekanlar, ilham verici projeler ve etkileyici görseller üretmeyi seviyorum.</p>
     </section>
 
-    <section class="card" id="projeler">
-      <h3>Projeler</h3>
-      <p>• Akıllı Mobilya Tasarımı<br>
-         • D5 Render ile Etkileşimli Görseller<br>
-         • Iwagumi Akvaryum Konsepti<br>
-         • Hafif Çelik Yapı Tasarımı</p>
+    <section id="projeler">
+      <h2>Projeler</h2>
+      <p>Bugüne kadar hayata geçirdiğim projeler arasında interaktif sanat enstalasyonları, iç mekan tasarımları, kullanıcı deneyimi merkezli dijital çalışmalar ve daha fazlası yer alıyor.</p>
     </section>
 
-    <section class="card" id="iletisim">
-      <h3>İletişim</h3>
-      <p>Bana ulaşmak isterseniz: <br>
-         <strong>berhan@example.com</strong><br>
-         LinkedIn · Instagram · GitHub</p>
+    <section id="iletisim">
+      <h2>İletişim</h2>
+      <p>Bana ulaşmak için: <br><br>📧 berhan@orneksite.com<br>📍 İstanbul, Türkiye</p>
     </section>
-  </main>
+  </div>
 
   <footer>
-    © 2025 Berhan Savaş. Tüm hakları saklıdır.
+    &copy; 2025 Berhan Savaş. Tüm hakları saklıdır.
   </footer>
 
 </body>
